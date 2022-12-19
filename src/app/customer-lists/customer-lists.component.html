@@ -1,0 +1,14 @@
+<div class="customer-lists">
+    <div class="input-field">
+        <div class="input-wrapper">
+            <input [(ngModel)]="input" type="text" id="name" placeholder="Input the name" #title="ngModel" required>
+            <button class="btn" (click)="addCustomer()" [disabled]="title.invalid">Add Customer</button>
+        </div>
+    </div>
+    <div class="output-field">
+        <ul>
+            <li class="lists" *ngFor="let customer of customers">{{customer}}</li>
+        </ul>
+    </div>
+
+</div>
